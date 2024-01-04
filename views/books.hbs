@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head> 
+  <title> {{title}} </title>
+</head>
+<body>
+   <h1>{{title}}</h1>
+<div> 
+   {{#each bookEntries}} 
+      <p><a href= 'book/{{this.id}}'>{{this.volumeInfo.title}} 
+      {{#each this.volumeInfo.authors}}
+        {{this}}
+      {{/each}}
+      </a></p> 
+   {{/each}} 
+</div>
+</body>
+</html>

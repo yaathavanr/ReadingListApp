@@ -1,0 +1,143 @@
+{{!-- <!DOCTYPE html>
+<html>
+<head> 
+  <title> {{title}} </title>
+</head>
+<body>
+   <h1>{{title}}</h1>
+   <h2>{{body}}</h2>
+   <input type='button' id="viewList_button" value='View List'>  
+   <br>
+   <input type='button' id="user_button" value='View Users'>
+   <br>
+   </div>
+   <div id = "userReadingList"> 
+   {{#each bookList}} 
+      <p>Title: {{this.bookTitle}}  Author: {{this.author}}  Publisher: {{this.publisher}}  <br>Description: <br>{{this.descrip}}</a></p> 
+      <br>
+      <br>
+   {{/each}} 
+  </div>
+   <br>
+   <input type='text' placeholder='Search' id='searchTitle'>    
+   <input type='button' id="search_button" value='Search'>
+   <input type='button' id="searchAuthor_button" value='Search by Author'>   
+   <div id = "bookResults"> 
+   {{#each bookEntries}} 
+      <p><a href= 'book/{{this.id}}'>{{this.volumeInfo.title}} 
+      {{#each this.volumeInfo.authors}}
+        {{this}}
+      {{/each}}
+      </a></p> 
+   {{/each}} 
+  </div> 
+   <script src="appClient.js"></script>
+   <script src='eventListeners.js'></script> 
+</body>
+</html> --}}
+<!DOCTYPE html>
+<html>
+<head> 
+  <title> {{title}} </title>
+  <style>
+    body {
+      background-color: #ADD8E6;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      font-family: 'Trebuchet MS', sans-serif;
+    }
+    #userReadingList, #bookResults {
+      text-align: center;
+      width: 80%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      margin-top: 20px;
+    }
+    input[type='text'], input[type='password'] {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    input[type='button'] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+    }
+    input[type='button']:hover {
+      background-color: #45a049;
+    }
+    h1, h2 {
+      text-align: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    p {
+      font-size: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      width: 80%;
+      max-width: 500px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+   <h1>{{title}}</h1>
+   <div class="navbar">
+       <input type='button' id="viewList_button" value='View List'>  
+       <input type='button' id="user_button" value='View Users'>
+   </div>
+   <h2>{{body}}</h2>
+   <div id = "userReadingList"> 
+   {{#each bookList}} 
+      <p>Title: {{this.bookTitle}}  Author: {{this.author}}  Publisher: {{this.publisher}}  <br>Description: <br>{{this.descrip}}</a></p> 
+      <br>
+      <br>
+   {{/each}} 
+  </div>
+   <br>
+   <input type='text' placeholder='Search' id='searchTitle'>    
+   <input type='button' id="search_button" value='Search'>
+   <input type='button' id="searchAuthor_button" value='Search by Author'>   
+   <div id = "bookResults"> 
+   {{#each bookEntries}} 
+      <p><a href= 'book/{{this.id}}'>{{this.volumeInfo.title}} 
+      {{#each this.volumeInfo.authors}}
+        {{this}}
+      {{/each}}
+      </a></p> 
+   {{/each}} 
+  </div> 
+   <script src="appClient.js"></script>
+   <script src='eventListeners.js'></script> 
+</body>
+</html>
+
+

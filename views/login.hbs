@@ -1,0 +1,116 @@
+{{!-- <!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    Login:
+    <div id='loginLine'></div>
+        <input type='text' placeholder='Username' id='username'>
+        <input type='text' placeholder='Password' id='password'>
+        <input type ='button' id ="connect_button" value='Login'>
+        <input type ='button' id ="reg_button" value='Register'>
+    </div>
+
+    <div id='registerLine' hidden>
+        Register:
+        <input type='text' placeholder='Username' id='registerUsername'>
+        <input type='text' placeholder='Password' id='registerPassword'>
+        <input type ='button' id ="register_button" value='Register'>
+    </div>
+
+    <script src="appClient.js"></script>
+    <script src='eventListeners.js'></script>
+
+</body>
+</html>  --}}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: lightblue;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        #loginLine, #registerLine {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+        input[type='text'] {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type='button'] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type='button']:hover {
+            background-color: #45a049;
+        }
+        input[type='password'] {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 60px;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>iRead</h1>
+    <div id='loginLine'>
+        <p>Login:</p>
+        <input type='text' placeholder='Username' id='username'>
+        <input type='password' placeholder='Password' id='password'>
+        <br>
+        <input type ='button' id ="connect_button" value='Login'>
+        <input type ='button' id ="reg_button" value='Register'>
+    </div>
+
+    <div id='registerLine' hidden>
+        <p>Register:</p>
+        <input type='text' placeholder='Username' id='registerUsername'>
+        <input type='password' placeholder='Password' id='registerPassword'>
+        <input type ='button' id ="register_button" value='Register'>
+    </div>
+
+    <script src="appClient.js"></script>
+    <script src='eventListeners.js'></script>
+
+</body>
+</html>
+
+

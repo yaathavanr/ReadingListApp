@@ -1,0 +1,59 @@
+{{!-- <!DOCTYPE html>
+<html>
+<head> 
+  <title> {{title}} </title>
+</head>
+<body>
+   <h1>{{title}}</h1>
+<div> 
+   {{#each userEntries}} 
+      <p>UserID: {{this.userid}}  Password: {{this.password}}</a></p> 
+   {{/each}} 
+</div>
+</body>
+</html> --}}
+<!DOCTYPE html>
+<html>
+<head> 
+  <title> {{title}} </title>
+  <style>
+    body {
+      background-color: lightblue;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    div {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+      width: 80%;
+      max-width: 500px;
+    }
+    h1 {
+      text-align: center;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    p {
+      font-size: 16px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+   <h1>{{title}}</h1>
+   <div> 
+   {{#each userEntries}} 
+      <p> UserID: {{this.userid}}  <br>Password: {{this.password}}<br></a></p> 
+   {{/each}} 
+   </div>
+      <script src="/HelperFunctions.js"></script>
+</body>
+</html>
